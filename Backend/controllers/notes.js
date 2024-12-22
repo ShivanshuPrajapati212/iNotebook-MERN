@@ -29,7 +29,7 @@ const addNote = async (req, res) => {
 
     const savedNote = await note.save()
 
-    return res.json(savedNote);
+    return res.json({success: true, savedNote});
 
   } catch(e) {
     return res
